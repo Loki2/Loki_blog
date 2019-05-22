@@ -8,38 +8,6 @@ Route::group(['namespace' => 'Users'], function(){
     
 });
 
-    Route::get('shops','users\ShopController@index')->name('shops.index');
-
-
-    Route::get('blog','users\BlogController@index')->name('blog.index');
-
-    Route::get('contact','users\ContactController@index')->name('contact.index');
-
-    Route::post('contact/save','users\ContactController@save')->name('contact.save');
-    Route::resource('/shop', 'HomeController@index');
-
-
-// Route::get('/blog','users\BlogController@index');
-Route::get('/blog_single','users\BlogController@index');
-
-Route::resource('loki','users\blogs\BlogPostController');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

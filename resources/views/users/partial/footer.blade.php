@@ -1,10 +1,45 @@
-<div class="newsletter">
+<!-- Brands -->
+
+<div class="brands">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="brands_slider_container">
+						
+						<!-- Brands Slider -->
+
+						<div class="owl-carousel owl-theme brands_slider">
+							
+							<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="{{URL::to('frontend/images/brands_1.jpg')}}" alt=""></div></div>
+							<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="{{URL::to('frontend/images/brands_2.jpg')}}" alt=""></div></div>
+							<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="{{URL::to('frontend/images/brands_3.jpg')}}" alt=""></div></div>
+							<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="{{URL::to('frontend/images/brands_4.jpg')}}" alt=""></div></div>
+							<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="{{URL::to('frontend/images/brands_5.jpg')}}" alt=""></div></div>
+							<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="{{URL::to('frontend/images/brands_6.jpg')}}" alt=""></div></div>
+							<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="{{URL::to('frontend/images/brands_7.jpg')}}" alt=""></div></div>
+							<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="{{URL::to('frontend/images/brands_8.jpg')}}" alt=""></div></div>
+
+						</div>
+						
+						<!-- Brands Slider Navigation -->
+						<div class="brands_nav brands_prev"><i class="fas fa-chevron-left"></i></div>
+						<div class="brands_nav brands_next"><i class="fas fa-chevron-right"></i></div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Newsletter -->
+
+	<div class="newsletter">
 		<div class="container">
 			<div class="row">
 				<div class="col">
 					<div class="newsletter_container d-flex flex-lg-row flex-column align-items-lg-center align-items-center justify-content-lg-start justify-content-center">
 						<div class="newsletter_title_container">
-							<div class="newsletter_icon"><img src="{{asset('frontend/images/send.png')}}" alt=""></div>
+							<div class="newsletter_icon"><img src="images/send.png" alt=""></div>
 							<div class="newsletter_title">Sign up for Newsletter</div>
 							<div class="newsletter_text"><p>...and receive %20 coupon for first shopping.</p></div>
 						</div>
@@ -20,7 +55,10 @@
 			</div>
 		</div>
 	</div>
-	<!-- Footer -->
+
+
+<!-- Footer -->
+
 <footer class="footer">
 		<div class="container">
 			<div class="row">
@@ -28,13 +66,13 @@
 				<div class="col-lg-3 footer_col">
 					<div class="footer_column footer_contact">
 						<div class="logo_container">
-							<div class="logo"><a href="#">W&W Computer</a></div>
+							<div class="logo"><a href="#">OneTech</a></div>
 						</div>
 						<div class="footer_title">Got Question? Call Us 24/7</div>
-						<div class="footer_phone">+856 20-2822-2732</div>
+						<div class="footer_phone">+38 068 005 3570</div>
 						<div class="footer_contact_text">
-							<p>Dongdok Village, Xaythany District</p>
-							<p>Vientiane Capt, Laos</p>
+							<p>17 Princess Road, London</p>
+							<p>Grester London NW18JR, UK</p>
 						</div>
 						<div class="footer_social">
 							<ul>
@@ -105,15 +143,15 @@
 					
 					<div class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
 						<div class="copyright_content"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-						Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved || by <a href="#" target="_blank">Art Digital</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Brizbox</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 </div>
 						<div class="logos ml-sm-auto">
 							<ul class="logos_list">
-								<li><a href="#"><img src="{{URL::to('frontend/images/logos_1.png')}}" alt=""></a></li>
-								<li><a href="#"><img src="{{URL::to('frontend/images/logos_2.png')}}" alt=""></a></li>
-								<li><a href="#"><img src="{{URL::to('frontend/images/logos_3.png')}}" alt=""></a></li>
-								<li><a href="#"><img src="{{URL::to('frontend/images/logos_4.png')}}" alt=""></a></li>
+								<li><a href="#"><img src="{{asset('frontend/images/logos_1.png')}}" alt=""></a></li>
+								<li><a href="#"><img src="{{asset('frontend/images/logos_2.png')}}" alt=""></a></li>
+								<li><a href="#"><img src="{{asset('frontend/images/logos_3.png')}}" alt=""></a></li>
+								<li><a href="#"><img src="{{asset('frontend/images/logos_4.png')}}" alt=""></a></li>
 							</ul>
 						</div>
 					</div>
@@ -132,13 +170,8 @@
 <script src="{{asset('frontend/plugins/greensock/animation.gsap.min.js')}}"></script>
 <script src="{{asset('frontend/plugins/greensock/ScrollToPlugin.min.js')}}"></script>
 <script src="{{asset('frontend/plugins/OwlCarousel2-2.2.1/owl.carousel.js')}}"></script>
-<script src="{{asset('frontend/plugins/slick-1.8.0/slick.js')}}"></script>
 <script src="{{asset('frontend/plugins/easing/easing.js')}}"></script>
-<script src="{{asset('frontend/js/custom.js')}}"></script>
+<script src="{{asset('frontend/plugins/Isotope/isotope.pkgd.min.js')}}"></script>
+<script src="{{asset('frontend/plugins/jquery-ui-1.12.1.custom/jquery-ui.js')}}"></script>
+<script src="{{asset('frontend/plugins/parallax-js-master/parallax.min.js')}}"></script>
 <script src="{{asset('frontend/js/shop_custom.js')}}"></script>
-<script src="{{asset('frontend/js/blog_custom.js')}}"></script>
-<script src="{{asset('frontend/js/blog_single_custom.js')}}"></script>
-<script src="{{asset('frontend/js/contact_custom.js')}}"></script>
-<script src="{{asset('frontend/js/cart_custom.js')}}"></script>
-
-
