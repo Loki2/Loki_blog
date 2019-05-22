@@ -9,8 +9,8 @@
             <div class="top_bar_content ml-auto">
                <div class="top_bar_user">
                <div class="user_icon"><img src="{{URL::to('frontend/images/user.svg')}}" alt=""></div>
-                  <div><a href="#">Register</a></div>
-                  <div><a href="#">Sign in</a></div>
+                  <div><a href="#">ລົງທະບຽນເພື່ອເຂົາໃຊ້ເວບ</a></div>
+                  <div><a href="#">ລັອກອິນເຂົາໃຊ້ເວບ</a></div>
                </div>
             </div>
          </div>
@@ -36,10 +36,10 @@
                <div class="header_search_content">
                   <div class="header_search_form_container">
                      <form action="#" class="header_search_form clearfix">
-                        <input type="search" required="required" class="header_search_input" placeholder="Search for products...">
+                        <input type="search" required="required" class="header_search_input" placeholder="ຄົ້ນຫາສິນຄ້າທີ່ຕ້ອງການ...">
                         <div class="custom_dropdown">
                            <div class="custom_dropdown_list">
-                              <span class="custom_dropdown_placeholder clc">All Categories</span>
+                              <span class="custom_dropdown_placeholder clc">ປະເພດສິນຄ້າທັງໝົດ</span>
                               <i class="fas fa-chevron-down"></i>
                               <ul class="custom_list clc">
                                  <li><a class="clc" href="#">All Categories</a></li>
@@ -64,7 +64,7 @@
                <div class="wishlist d-flex flex-row align-items-center justify-content-end">
                   <div class="wishlist_icon"><img src="{{URL::to('frontend/images/heart.png')}}" alt=""></div>
                   <div class="wishlist_content">
-                     <div class="wishlist_text"><a href="#">Wishlist</a></div>
+                     <div class="wishlist_text"><a href="#">ສິງທີ່ມັກ</a></div>
                      <div class="wishlist_count">115</div>
                   </div>
                </div>
@@ -77,11 +77,7 @@
                         <div class="cart_count"><span>10</span></div>
                      </div>
                      <div class="cart_content">
-                        <div class="cart_text"><a href="#">Cart</a></div>
-                        <div class="cart_price">$85</div>
-                     </div>
-                     <div class="cart_content">
-                        <div class="cart_text"><a href="#">Cart</a></div>
+                        <div class="cart_text"><a href="#">ກະຕາ</a></div>
                         <div class="cart_price">$85</div>
                      </div>
                   </div>
