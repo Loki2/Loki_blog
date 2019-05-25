@@ -85,33 +85,6 @@
 						</div>
 					</div>
 				</div>
-
-				<div class="col-lg-2 offset-lg-2">
-					<div class="footer_column">
-						<div class="footer_title">Find it Fast</div>
-						<ul class="footer_list">
-							<li><a href="#">Computers & Laptops</a></li>
-							<li><a href="#">Cameras & Photos</a></li>
-						</ul>
-						<div class="footer_subtitle">Gadgets</div>
-						<ul class="footer_list">
-							<li><a href="#">Car Electronics</a></li>
-						</ul>
-					</div>
-				</div>
-				
-				<div class="col-lg-2">
-					<div class="footer_column">
-						<div class="footer_title">Customer Care</div>
-						<ul class="footer_list">
-							<li><a href="#">My Account</a></li>
-							<li><a href="#">Returns / Exchange</a></li>
-							<li><a href="#">FAQs</a></li>
-							<li><a href="#">Product Support</a></li>
-						</ul>
-					</div>
-				</div>
-
 			</div>
 		</div>
 	</footer>
@@ -142,18 +115,15 @@ Copyright &copy; Power <i class="fa fa-heart" aria-hidden="true"></i> by <a href
 		</div>
 	</div>
 </div>
-
 <script src="{{asset('frontend/js/jquery-3.3.1.min.js')}}"></script>
 <script src="{{asset('frontend/styles/bootstrap4/popper.js')}}"></script>
 <script src="{{asset('frontend/styles/bootstrap4/bootstrap.min.js')}}"></script>
 <script src="{{asset('frontend/plugins/greensock/TweenMax.min.js')}}"></script>
-<script src="{{asset('frontend/plugins/greensock/TimelineMax.min.js')}}"></script>
+<script src="{{asset('frontend/plugins/greensock/TimelineMax.min.j')}}s"></script>
 <script src="{{asset('frontend/plugins/scrollmagic/ScrollMagic.min.js')}}"></script>
 <script src="{{asset('frontend/plugins/greensock/animation.gsap.min.js')}}"></script>
 <script src="{{asset('frontend/plugins/greensock/ScrollToPlugin.min.js')}}"></script>
 <script src="{{asset('frontend/plugins/OwlCarousel2-2.2.1/owl.carousel.js')}}"></script>
+<script src="{{asset('frontend/plugins/slick-1.8.0/slick.js')}}"></script>
 <script src="{{asset('frontend/plugins/easing/easing.js')}}"></script>
-<script src="{{asset('frontend/plugins/Isotope/isotope.pkgd.min.js')}}"></script>
-<script src="{{asset('frontend/plugins/jquery-ui-1.12.1.custom/jquery-ui.js')}}"></script>
-<script src="{{asset('frontend/plugins/parallax-js-master/parallax.min.js')}}"></script>
-<script src="{{asset('frontend/js/shop_custom.js')}}"></script>
+<script src="{{asset('frontend/js/custom.js')}}"></script>

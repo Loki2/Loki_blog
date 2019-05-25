@@ -72,7 +72,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="{{url('/product')}}"><i class="fa fa-circle-o"></i> ສິນຄ້າທັງໝົດ</a></li>
+            <li><a href="{{url('/all-products')}}"><i class="fa fa-circle-o"></i> ສິນຄ້າທັງໝົດ</a></li>
             <li><a href="{{url('/all-category')}}"><i class="fa fa-circle-o"></i> ປະເພດສີນຄ້າ</a></li>
             <li><a href="{{url('/all-brand')}}"><i class="fa fa-circle-o"></i> ຍີຫໍ້ສິນຄ້າ</a></li>
             <li><a href="{{url('/all-unit')}}"><i class="fa fa-circle-o"></i> ຫົວໜ່ວຍສິນຄ້າ</a></li>
@@ -177,7 +177,7 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="pages/examples/invoice.html"><i class="fa fa-circle-o"></i>Add Blog</a></li>
-            <li><a href="{{route('blog.index')}}"><i class="fa fa-circle-o"></i> All Blog</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> All Blog</a></li>
             <li><a href="pages/examples/profile.html"><i class="fa fa-circle-o"></i> Blog Category</a></li>
             <li><a href="pages/examples/profile.html"><i class="fa fa-circle-o"></i> Blog Tag</a></li>
           </ul>

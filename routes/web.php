@@ -5,9 +5,12 @@
 */
 Route::group(['namespace' => 'Users'], function(){
     Route::resource('/', 'HomeController');
-    
 });
 
+
+Route::get('/product', function(){
+    return view('users.view_product');
+});
 
 
 
@@ -57,6 +60,9 @@ Route::group(['namespace' => 'Users'], function(){
 /*
 ***************** Back End Route Are here ***********
 */
+Route::group(['prefix'=>'admin', 'middleware'=>'auth'], function(){
+
+});
 Route::get('/logout','SuperAdminController@index');
 Route::get('/admin-register','SuperAdminController@create');
 Route::get('/admin', 'admin\HomeController@index');
@@ -76,7 +82,7 @@ Route::get('/update-typeEmployee/{type_id}', 'admin\TypeEmployeeController@updat
 Route::get('/delete-typeEmployee/{type_id}', 'admin\TypeEmployeeController@destroy');
 
 // ********************** Product Releated Route **************************
-Route::get('/product', 'admin\ProductController@index');
+Route::get('/all-products', 'admin\ProductController@index');
 
 // ********************** Category Releated Route **************************
 Route::get('/all-category', 'admin\CategoryController@index');
