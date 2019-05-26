@@ -46,12 +46,13 @@
 										<span class="custom_dropdown_placeholder clc">ປະເພດສິນຄ້າທັງໝົດ</span>
 										<i class="fas fa-chevron-down"></i>
 										<ul class="custom_list clc">
-											<li><a class="clc" href="#">All Categories</a></li>
-											<li><a class="clc" href="#">Computers</a></li>
-											<li><a class="clc" href="#">Laptops</a></li>
-											<li><a class="clc" href="#">Cameras</a></li>
-											<li><a class="clc" href="#">Hardware</a></li>
-											<li><a class="clc" href="#">Smartphones</a></li>
+										<?php
+										$all_publication_categories = DB::table('categories')
+													->where('publication_status', 1)
+													->get();
+														foreach ($all_publication_categories as $v_category) { ?>
+											<li><a href="#">{{$v_category->cat_name}} <i class="fas fa-chevron-right ml-auto"></i></a></li>
+											<?php } ?>
 										</ul>
 									</div>
 								</div>
@@ -102,39 +103,19 @@
 				<div class="main_nav_content d-flex flex-row">
 
 					<!-- Categories Menu -->
-
 					<div class="cat_menu_container">
 						<div class="cat_menu_title d-flex flex-row align-items-center justify-content-start">
 							<div class="cat_burger"><span></span><span></span><span></span></div>
 							<div class="cat_menu_text">ປະເພດສິນຄ້າທັງໝົດ</div>
 						</div>
-
 						<ul class="cat_menu">
-							<li><a href="#">Computers & Laptops <i class="fas fa-chevron-right ml-auto"></i></a></li>
-							<li><a href="#">Cameras & Photos<i class="fas fa-chevron-right"></i></a></li>
-							<li class="hassubs">
-								<a href="#">Hardware<i class="fas fa-chevron-right"></i></a>
-								<ul>
-									<li class="hassubs">
-										<a href="#">Menu Item<i class="fas fa-chevron-right"></i></a>
-										<ul>
-											<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>
-											<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>
-											<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>
-											<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>
-										</ul>
-									</li>
-									<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>
-									<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>
-									<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>
-								</ul>
-							</li>
-							<li><a href="#">Smartphones & Tablets<i class="fas fa-chevron-right"></i></a></li>
-							<li><a href="#">TV & Audio<i class="fas fa-chevron-right"></i></a></li>
-							<li><a href="#">Gadgets<i class="fas fa-chevron-right"></i></a></li>
-							<li><a href="#">Car Electronics<i class="fas fa-chevron-right"></i></a></li>
-							<li><a href="#">Video Games & Consoles<i class="fas fa-chevron-right"></i></a></li>
-							<li><a href="#">Accessories<i class="fas fa-chevron-right"></i></a></li>
+						<?php
+										$all_publication_categories = DB::table('categories')
+													->where('publication_status', 1)
+													->get();
+										foreach ($all_publication_categories as $v_category) { ?>
+							<li><a href="#">{{$v_category->cat_name}} <i class="fas fa-chevron-right ml-auto"></i></a></li>
+							<?php } ?>
 						</ul>
 					</div>
 
@@ -143,50 +124,24 @@
 					<div class="main_nav_menu ml-auto">
 						<ul class="standard_dropdown main_nav_dropdown">
 							<li><a href="{{URL::to('/')}}">Home<i class="fas fa-chevron-down"></i></a></li>
-							<!-- <li class="hassubs">
-								<a href="#">Super Deals<i class="fas fa-chevron-down"></i></a>
+							
+
+							<!-- Brand release to frontend start Here -->
+							<li class="hassubs">
+								<a href="#">Brand<i class="fas fa-chevron-down"></i></a>
 								<ul>
-									<li>
-										<a href="#">Menu Item<i class="fas fa-chevron-down"></i></a>
-										<ul>
-											<li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
-											<li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
-											<li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
-										</ul>
-									</li>
-									<li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
-									<li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
-									<li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
+									<?php
+										$all_publication_brand = DB::table('brands')
+													->where('publication_status', 1)
+													->get();
+										foreach ($all_publication_brand as $v_brand) { ?>
+										<li><a href="shop.html">{{$v_brand -> brand_name}}<i class="fas fa-chevron-down"></i></a></li>
+										<?php } ?>
 								</ul>
-							</li> -->
-							<!-- <li class="hassubs">
-								<a href="#">Featured Brands<i class="fas fa-chevron-down"></i></a>
-								<ul>
-									<li>
-										<a href="#">Menu Item<i class="fas fa-chevron-down"></i></a>
-										<ul>
-											<li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
-											<li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
-											<li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
-										</ul>
-									</li>
-									<li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
-									<li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
-									<li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
-								</ul>
-							</li> -->
-							<!-- <li class="hassubs">
-								<a href="#">Pages<i class="fas fa-chevron-down"></i></a>
-								<ul>
-									<li><a href="shop.html">Shop<i class="fas fa-chevron-down"></i></a></li>
-									<li><a href="product.html">Product<i class="fas fa-chevron-down"></i></a></li>
-									<li><a href="{{URL::to('/blog')}}">Blog<i class="fas fa-chevron-down"></i></a></li>
-									<li><a href="blog_single.html">Blog Post<i class="fas fa-chevron-down"></i></a></li>
-									<li><a href="regular.html">Regular Post<i class="fas fa-chevron-down"></i></a></li>
-									<li><a href="cart.html">Cart<i class="fas fa-chevron-down"></i></a></li>
-									<li><a href="contact.html">Contact<i class="fas fa-chevron-down"></i></a></li>
-								</ul>
-							</li> -->
+							</li>
+							<!-- Brand release to frontend end Here -->
+
+
 							<li><a href="{{URL::to('/blog')}}">Blog<i class="fas fa-chevron-down"></i></a></li>
 							<li><a href="{{URL::to('/contact')}}">Contact<i class="fas fa-chevron-down"></i></a></li>
 						</ul>
