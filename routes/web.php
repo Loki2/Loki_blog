@@ -11,7 +11,24 @@ Route::group(['namespace' => 'Users'], function(){
 Route::get('/product', function(){
     return view('users.view_product');
 });
+Route::get('/blog', function(){
+    return view('users.blog');
+});
+Route::get('/single-blog', function(){
+    return view('users.single_blog');
+});
 
+Route::get('/registration', function(){
+    return view('users.registration');
+});
+
+Route::get('/login', function(){
+    return view('users.login');
+});
+
+Route::get('/contact', function(){
+    return view('users.contact');
+});
 
 
 

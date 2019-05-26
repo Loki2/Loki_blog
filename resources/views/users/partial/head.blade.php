@@ -15,3 +15,12 @@
 <link rel="stylesheet" type="text/css" href="{{asset('frontend/styles/shop_responsive.css')}}">
 <link rel="stylesheet" type="text/css" href="{{asset('frontend/styles/product_styles.css')}}">
 <link rel="stylesheet" type="text/css" href="{{asset('frontend/styles/product_responsive.css')}}">
+
+<link rel="stylesheet" type="text/css" href="{{asset('frontend/styles/blog_styles.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('frontend/styles/blog_responsive.css')}}">
+
+<link rel="stylesheet" type="text/css" href="{{asset('frontend/styles/blog_single_styles.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('frontend/styles/blog_single_responsive.css')}}">
+
+<link rel="stylesheet" type="text/css" href="{{asset('frontend/styles/contact_styles.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('frontend/styles/contact_responsive.css')}}">

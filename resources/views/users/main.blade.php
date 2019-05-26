@@ -9,99 +9,169 @@
 					<div class="card-body">
 						<h5 class="card-title">Card title</h5>
 						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						<a href="#" class="btn btn-default">View</a>
+						<div class="viewed_price">$225<span>$300</span></div>
+						<a href="{{URL::to('/product')}}" class="btn btn-default">View</a>
 						<a href="#" class="btn btn-default">Like</a>
 						<a href="#" class="btn btn-default">Add Cart</a>
 					</div>
 				</div>
 				
-				<div class="card col-lg-3">
-					<img class="card-img-top" src="{{URL::to('frontend/images/shop_2.jpg')}}" style="width:40%;" alt="Card image cap">
-					<div class="card-body">
-						<h5 class="card-title">Card title</h5>
-						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						<a href="#" class="btn btn-primary">View</a>
-					</div>
-				</div>
-				
-				<div class="card col-lg-3">
-					<img class="card-img-top" src="{{URL::to('frontend/images/shop_2.jpg')}}" style="width:40%;" alt="Card image cap">
-					<div class="card-body">
-						<h5 class="card-title">Card title</h5>
-						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						<a href="#" class="btn btn-primary">View</a>
-					</div>
-				</div>
 
 				<div class="card col-lg-3">
 					<img class="card-img-top" src="{{URL::to('frontend/images/shop_2.jpg')}}" style="width:40%;" alt="Card image cap">
 					<div class="card-body">
 						<h5 class="card-title">Card title</h5>
 						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						<a href="#" class="btn btn-primary">View</a>
+						<div class="viewed_price">$225<span>$300</span></div>
+						<a href="{{URL::to('/product')}}" class="btn btn-default">View</a>
+						<a href="#" class="btn btn-default">Like</a>
+						<a href="#" class="btn btn-default">Add Cart</a>
+					</div>
+				</div>
+				<div class="card col-lg-3">
+					<img class="card-img-top" src="{{URL::to('frontend/images/shop_2.jpg')}}" style="width:40%;" alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title">Card title</h5>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<div class="viewed_price">$225<span>$300</span></div>
+						<a href="{{URL::to('/product')}}" class="btn btn-default">View</a>
+						<a href="#" class="btn btn-default">Like</a>
+						<a href="#" class="btn btn-default">Add Cart</a>
+					</div>
+				</div>
+				<div class="card col-lg-3">
+					<img class="card-img-top" src="{{URL::to('frontend/images/shop_2.jpg')}}" style="width:40%;" alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title">Card title</h5>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<div class="viewed_price">$225<span>$300</span></div>
+						<a href="{{URL::to('/product')}}" class="btn btn-default">View</a>
+						<a href="#" class="btn btn-default">Like</a>
+						<a href="#" class="btn btn-default">Add Cart</a>
+					</div>
+				</div>
+				<div class="card col-lg-3">
+					<img class="card-img-top" src="{{URL::to('frontend/images/shop_2.jpg')}}" style="width:40%;" alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title">Card title</h5>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<div class="viewed_price">$225<span>$300</span></div>
+						<a href="{{URL::to('/product')}}" class="btn btn-default">View</a>
+						<a href="#" class="btn btn-default">Like</a>
+						<a href="#" class="btn btn-default">Add Cart</a>
+					</div>
+				</div>
+				<div class="card col-lg-3">
+					<img class="card-img-top" src="{{URL::to('frontend/images/shop_2.jpg')}}" style="width:40%;" alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title">Card title</h5>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<div class="viewed_price">$225<span>$300</span></div>
+						<a href="{{URL::to('/product')}}" class="btn btn-default">View</a>
+						<a href="#" class="btn btn-default">Like</a>
+						<a href="#" class="btn btn-default">Add Cart</a>
+					</div>
+				</div>
+				<div class="card col-lg-3">
+					<img class="card-img-top" src="{{URL::to('frontend/images/shop_2.jpg')}}" style="width:40%;" alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title">Card title</h5>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<div class="viewed_price">$225<span>$300</span></div>
+						<a href="{{URL::to('/product')}}" class="btn btn-default">View</a>
+						<a href="#" class="btn btn-default">Like</a>
+						<a href="#" class="btn btn-default">Add Cart</a>
+					</div>
+				</div>
+				<div class="card col-lg-3">
+					<img class="card-img-top" src="{{URL::to('frontend/images/shop_2.jpg')}}" style="width:40%;" alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title">Card title</h5>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<div class="viewed_price">$225<span>$300</span></div>
+						<a href="{{URL::to('/product')}}" class="btn btn-default">View</a>
+						<a href="#" class="btn btn-default">Like</a>
+						<a href="#" class="btn btn-default">Add Cart</a>
+					</div>
+				</div>
+				<div class="card col-lg-3">
+					<img class="card-img-top" src="{{URL::to('frontend/images/shop_2.jpg')}}" style="width:40%;" alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title">Card title</h5>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<div class="viewed_price">$225<span>$300</span></div>
+						<a href="{{URL::to('/product')}}" class="btn btn-default">View</a>
+						<a href="#" class="btn btn-default">Like</a>
+						<a href="#" class="btn btn-default">Add Cart</a>
+					</div>
+				</div>
+				<div class="card col-lg-3">
+					<img class="card-img-top" src="{{URL::to('frontend/images/shop_2.jpg')}}" style="width:40%;" alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title">Card title</h5>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<div class="viewed_price">$225<span>$300</span></div>
+						<a href="{{URL::to('/product')}}" class="btn btn-default">View</a>
+						<a href="#" class="btn btn-default">Like</a>
+						<a href="#" class="btn btn-default">Add Cart</a>
+					</div>
+				</div>
+				<div class="card col-lg-3">
+					<img class="card-img-top" src="{{URL::to('frontend/images/shop_2.jpg')}}" style="width:40%;" alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title">Card title</h5>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<div class="viewed_price">$225<span>$300</span></div>
+						<a href="{{URL::to('/product')}}" class="btn btn-default">View</a>
+						<a href="#" class="btn btn-default">Like</a>
+						<a href="#" class="btn btn-default">Add Cart</a>
+					</div>
+				</div>
+				<div class="card col-lg-3">
+					<img class="card-img-top" src="{{URL::to('frontend/images/shop_2.jpg')}}" style="width:40%;" alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title">Card title</h5>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<div class="viewed_price">$225<span>$300</span></div>
+						<a href="{{URL::to('/product')}}" class="btn btn-default">View</a>
+						<a href="#" class="btn btn-default">Like</a>
+						<a href="#" class="btn btn-default">Add Cart</a>
+					</div>
+				</div>
+				<div class="card col-lg-3">
+					<img class="card-img-top" src="{{URL::to('frontend/images/shop_2.jpg')}}" style="width:40%;" alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title">Card title</h5>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<div class="viewed_price">$225<span>$300</span></div>
+						<a href="{{URL::to('/product')}}" class="btn btn-default">View</a>
+						<a href="#" class="btn btn-default">Like</a>
+						<a href="#" class="btn btn-default">Add Cart</a>
+					</div>
+				</div>
+				<div class="card col-lg-3">
+					<img class="card-img-top" src="{{URL::to('frontend/images/shop_2.jpg')}}" style="width:40%;" alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title">Card title</h5>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<div class="viewed_price">$225<span>$300</span></div>
+						<a href="{{URL::to('/product')}}" class="btn btn-default">View</a>
+						<a href="#" class="btn btn-default">Like</a>
+						<a href="#" class="btn btn-default">Add Cart</a>
+					</div>
+				</div>
+				<div class="card col-lg-3">
+					<img class="card-img-top" src="{{URL::to('frontend/images/shop_2.jpg')}}" style="width:40%;" alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title">Card title</h5>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<div class="viewed_price">$225<span>$300</span></div>
+						<a href="{{URL::to('/product')}}" class="btn btn-default">View</a>
+						<a href="#" class="btn btn-default">Like</a>
+						<a href="#" class="btn btn-default">Add Cart</a>
 					</div>
 				</div>
 
-				<div class="card col-lg-3">
-					<img class="card-img-top" src="{{URL::to('frontend/images/shop_2.jpg')}}" style="width:40%;" alt="Card image cap">
-					<div class="card-body">
-						<h5 class="card-title">Card title</h5>
-						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						<a href="#" class="btn btn-primary">View</a>
-					</div>
-				</div>
-
-				<div class="card col-lg-3">
-					<img class="card-img-top" src="{{URL::to('frontend/images/shop_2.jpg')}}" style="width:40%;" alt="Card image cap">
-					<div class="card-body">
-						<h5 class="card-title">Card title</h5>
-						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						<a href="#" class="btn btn-primary">View</a>
-					</div>
-				</div>
-
-				<div class="card col-lg-3">
-					<img class="card-img-top" src="{{URL::to('frontend/images/shop_2.jpg')}}" style="width:40%;" alt="Card image cap">
-					<div class="card-body">
-						<h5 class="card-title">Card title</h5>
-						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						<a href="#" class="btn btn-primary">View</a>
-					</div>
-				</div>
-
-				<div class="card col-lg-3">
-					<img class="card-img-top" src="{{URL::to('frontend/images/shop_2.jpg')}}" style="width:40%;" alt="Card image cap">
-					<div class="card-body">
-						<h5 class="card-title">Card title</h5>
-						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						<a href="#" class="btn btn-primary">View</a>
-					</div>
-				</div>
-
-				<div class="card col-lg-3">
-					<img class="card-img-top" src="{{URL::to('frontend/images/shop_2.jpg')}}" style="width:40%;" alt="Card image cap">
-					<div class="card-body">
-						<h5 class="card-title">Card title</h5>
-						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						<a href="#" class="btn btn-primary">View</a>
-					</div>
-				</div>
-				<div class="card col-lg-3">
-					<img class="card-img-top" src="{{URL::to('frontend/images/shop_2.jpg')}}" style="width:40%;" alt="Card image cap">
-					<div class="card-body">
-						<h5 class="card-title">Card title</h5>
-						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						<a href="#" class="btn btn-primary">View</a>
-					</div>
-				</div>
-				<div class="card col-lg-3">
-					<img class="card-img-top" src="{{URL::to('frontend/images/shop_2.jpg')}}" style="width:40%;" alt="Card image cap">
-					<div class="card-body">
-						<h5 class="card-title">Card title</h5>
-						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						<a href="#" class="btn btn-primary">View</a>
-					</div>
-				</div>
 								
 					
 				

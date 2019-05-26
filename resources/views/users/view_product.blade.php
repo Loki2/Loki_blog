@@ -71,12 +71,147 @@
 			</div>
 		</div>
 	</div>
+	<div class="contact_form">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2">
+					<div class="contact_form_container">
+						<div class="contact_form_title">Leave Your Commemt</div>
 
+						<form action="#" id="contact_form">
+							<div class="contact_form_inputs d-flex flex-md-row flex-column justify-content-between align-items-between">
+								<input type="text" id="contact_form_name" class="contact_form_name input_field" placeholder="Your name" required="required" data-error="Name is required.">
+								<input type="email" id="contact_form_email" class="contact_form_email input_field" placeholder="Your email" required="required" data-error="Email is required.">
+							</div>
+							<div class="contact_form_text">
+								<textarea id="contact_form_message" class="text_field contact_form_message" name="message" rows="4" placeholder="Message" required="required" data-error="Please, write us a message."></textarea>
+							</div>
+							<div class="contact_form_button">
+								<button type="submit" class="button contact_submit_button">Send</button>
+							</div>
+						</form>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="panel"></div>
+	</div>
 	<!-- Recently Viewed -->
+	<div class="viewed">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="viewed_title_container">
+						<h3 class="viewed_title">Recently Viewed</h3>
+						<div class="viewed_nav_container">
+							<div class="viewed_nav viewed_prev"><i class="fas fa-chevron-left"></i></div>
+							<div class="viewed_nav viewed_next"><i class="fas fa-chevron-right"></i></div>
+						</div>
+					</div>
 
+					<div class="viewed_slider_container">
+						
+						<!-- Recently Viewed Slider -->
 
+						<div class="owl-carousel owl-theme viewed_slider">
+							
+							<!-- Recently Viewed Item -->
+							<div class="owl-item">
+								<div class="viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
+									<div class="viewed_image"><img src="images/view_1.jpg" alt=""></div>
+									<div class="viewed_content text-center">
+										<div class="viewed_price">$225<span>$300</span></div>
+										<div class="viewed_name"><a href="#">Beoplay H7</a></div>
+									</div>
+									<ul class="item_marks">
+										<li class="item_mark item_discount">-25%</li>
+										<li class="item_mark item_new">new</li>
+									</ul>
+								</div>
+							</div>
 
+							<!-- Recently Viewed Item -->
+							<div class="owl-item">
+								<div class="viewed_item d-flex flex-column align-items-center justify-content-center text-center">
+									<div class="viewed_image"><img src="images/view_2.jpg" alt=""></div>
+									<div class="viewed_content text-center">
+										<div class="viewed_price">$379</div>
+										<div class="viewed_name"><a href="#">LUNA Smartphone</a></div>
+									</div>
+									<ul class="item_marks">
+										<li class="item_mark item_discount">-25%</li>
+										<li class="item_mark item_new">new</li>
+									</ul>
+								</div>
+							</div>
 
+							<!-- Recently Viewed Item -->
+							<div class="owl-item">
+								<div class="viewed_item d-flex flex-column align-items-center justify-content-center text-center">
+									<div class="viewed_image"><img src="images/view_3.jpg" alt=""></div>
+									<div class="viewed_content text-center">
+										<div class="viewed_price">$225</div>
+										<div class="viewed_name"><a href="#">Samsung J730F...</a></div>
+									</div>
+									<ul class="item_marks">
+										<li class="item_mark item_discount">-25%</li>
+										<li class="item_mark item_new">new</li>
+									</ul>
+								</div>
+							</div>
+
+							<!-- Recently Viewed Item -->
+							<div class="owl-item">
+								<div class="viewed_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+									<div class="viewed_image"><img src="images/view_4.jpg" alt=""></div>
+									<div class="viewed_content text-center">
+										<div class="viewed_price">$379</div>
+										<div class="viewed_name"><a href="#">Huawei MediaPad...</a></div>
+									</div>
+									<ul class="item_marks">
+										<li class="item_mark item_discount">-25%</li>
+										<li class="item_mark item_new">new</li>
+									</ul>
+								</div>
+							</div>
+
+							<!-- Recently Viewed Item -->
+							<div class="owl-item">
+								<div class="viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
+									<div class="viewed_image"><img src="images/view_5.jpg" alt=""></div>
+									<div class="viewed_content text-center">
+										<div class="viewed_price">$225<span>$300</span></div>
+										<div class="viewed_name"><a href="#">Sony PS4 Slim</a></div>
+									</div>
+									<ul class="item_marks">
+										<li class="item_mark item_discount">-25%</li>
+										<li class="item_mark item_new">new</li>
+									</ul>
+								</div>
+							</div>
+
+							<!-- Recently Viewed Item -->
+							<div class="owl-item">
+								<div class="viewed_item d-flex flex-column align-items-center justify-content-center text-center">
+									<div class="viewed_image"><img src="images/view_6.jpg" alt=""></div>
+									<div class="viewed_content text-center">
+										<div class="viewed_price">$375</div>
+										<div class="viewed_name"><a href="#">Speedlink...</a></div>
+									</div>
+									<ul class="item_marks">
+										<li class="item_mark item_discount">-25%</li>
+										<li class="item_mark item_new">new</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 @endsection
 <script src="{{asset('frontend/js/product_custom.js')}}"></script>
