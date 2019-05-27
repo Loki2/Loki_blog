@@ -123,12 +123,12 @@
 
 					<div class="main_nav_menu ml-auto">
 						<ul class="standard_dropdown main_nav_dropdown">
-							<li><a href="{{URL::to('/')}}">Home<i class="fas fa-chevron-down"></i></a></li>
+							<li><a href="{{URL::to('/')}}">ໜ້າຫລັກ<i class="fas fa-chevron-down"></i></a></li>
 							
 
 							<!-- Brand release to frontend start Here -->
 							<li class="hassubs">
-								<a href="#">Brand<i class="fas fa-chevron-down"></i></a>
+								<a href="#">ຍີຫໍ້ສິນຄ້າ<i class="fas fa-chevron-down"></i></a>
 								<ul>
 									<?php
 										$all_publication_brand = DB::table('brands')
@@ -142,8 +142,8 @@
 							<!-- Brand release to frontend end Here -->
 
 
-							<li><a href="{{URL::to('/blog')}}">Blog<i class="fas fa-chevron-down"></i></a></li>
-							<li><a href="{{URL::to('/contact')}}">Contact<i class="fas fa-chevron-down"></i></a></li>
+							<li><a href="{{URL::to('/blog')}}">ຂ່າວສານດ້ານໄອທີ<i class="fas fa-chevron-down"></i></a></li>
+							<li><a href="{{URL::to('/contact')}}">ຕິດຕໍ່ພວກເຮົາ<i class="fas fa-chevron-down"></i></a></li>
 						</ul>
 					</div>
 
@@ -181,36 +181,22 @@
 					<ul class="page_menu_nav">
 						
 						<li class="page_menu_item">
-							<a href="#">Home<i class="fa fa-angle-down"></i></a>
+							<a href="{{URL::to('/')}}">ໜ້າຫລັກ<i class="fa fa-angle-down"></i></a>
 						</li>
 						<li class="page_menu_item has-children">
-							<a href="#">Super Deals<i class="fa fa-angle-down"></i></a>
+							<a href="#">ຍີຫໍ້ສິນຄ້າ<i class="fa fa-angle-down"></i></a>
 							<ul class="page_menu_selection">
-								<li><a href="#">Super Deals<i class="fa fa-angle-down"></i></a></li>
-								<li class="page_menu_item has-children">
-									<a href="#">Menu Item<i class="fa fa-angle-down"></i></a>
-									<ul class="page_menu_selection">
-										<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-										<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-										<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-										<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-									</ul>
-								</li>
-								<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-								<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-								<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+							<?php
+										$all_publication_brand = DB::table('brands')
+													->where('publication_status', 1)
+													->get();
+										foreach ($all_publication_brand as $v_brand) { ?>
+										<li><a href="#">{{$v_brand -> brand_name}}<i class="fas fa-chevron-down"></i></a></li>
+										<?php } ?>
+								
 							</ul>
 						</li>
-						<li class="page_menu_item has-children">
-							<a href="#">Featured Brands<i class="fa fa-angle-down"></i></a>
-							<ul class="page_menu_selection">
-								<li><a href="#">Featured Brands<i class="fa fa-angle-down"></i></a></li>
-								<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-								<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-								<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-							</ul>
-						</li>
-						<li class="page_menu_item has-children">
+						<!-- <li class="page_menu_item has-children">
 							<a href="#">Trending Styles<i class="fa fa-angle-down"></i></a>
 							<ul class="page_menu_selection">
 								<li><a href="#">Trending Styles<i class="fa fa-angle-down"></i></a></li>
@@ -218,9 +204,9 @@
 								<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
 								<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
 							</ul>
-						</li>
-						<li class="page_menu_item"><a href="{{URL::to('/blog')}}">blog<i class="fa fa-angle-down"></i></a></li>
-						<li class="page_menu_item"><a href="{{URL::to('/contact')}}">contact<i class="fa fa-angle-down"></i></a></li>
+						</li> -->
+						<li class="page_menu_item"><a href="{{URL::to('/blog')}}">ຂ່າວສານດ້ານໄອທີ<i class="fa fa-angle-down"></i></a></li>
+						<li class="page_menu_item"><a href="{{URL::to('/contact')}}">ຕິດຕໍ່ພວກເຮົາ<i class="fa fa-angle-down"></i></a></li>
 					</ul>
 					
 					<div class="menu_contact">

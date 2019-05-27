@@ -49,6 +49,8 @@
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/dropzone.js"></script>
 <script src="{{asset('backend/js/bootbox.min.js')}}"></script>
+<script src="{{asset('backend/bower_components/ckeditor/ckeditor.js')}}"></script>
+<script src="//cdn.ckeditor.com/4.11.4/full/ckeditor.js"></script>
 <script>
 			$(document).on("click","#delete", function(e){
 				e.preventDefault();
@@ -65,4 +67,13 @@
 			} );
 
 			$('#datepicker').datepicker();
+</script>
+<script>
+  $(function () {
+    // Replace the <textarea id="editor1"> with a CKEditor
+    // instance, using default configuration.
+    CKEDITOR.replace('editor1')
+    //bootstrap WYSIHTML5 - text editor
+    $('.textarea').wysihtml5()
+  })
 </script>

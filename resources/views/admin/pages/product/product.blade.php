@@ -57,59 +57,92 @@
                      <h5 class="modal-title" id="CatModalLabel">ສ້າງຂໍ້ມູນສິນຄ້າໃຫມ່</h5>
                      </div>
                      <div class="modal-body">
-                     <form role="form">
+                     <form role="form" action="{{URL::to('/save-product')}}" method="post" enctype="multipart/from-data">
+                        {{ csrf_field() }}
+
                     <div class="box-body">
-                      <div class="form-group col-md-6">
-                        <label for="cat_id">ລະຫັດສິນຄ້າ</label>
-                        <input type="text" class="form-control" id="cat_id" placeholder="ລະຫັດສິນຄ້າ">
-                      </div>
-                      <div class="form-group col-md-6">
+                      <div class="form-group col-lg-6">
                         <label for="cat_id">ລະຫັດບາໂຄດ</label>
                         <input type="text" class="form-control" id="cat_id" placeholder="ລະຫັດບາໂຄດ">
                       </div>
-                      <div class="form-group col-md-6">
-                        <label for="category">ຊື່ສິນຄ້າ</label>
-                        <input type="password" class="form-control" id="category" placeholder="ຊື່ສິນຄ້າ">
-                      </div>
-                      <div class="form-group col-md-6">
-                        <label for="cat_id">ປະເພດສິນຄ້າ</label>
-                        <input type="text" class="form-control" id="cat_id" placeholder="ປະເພດສິນຄ້າ">
-                      </div>
-                      <div class="form-group col-md-6">
-                        <label for="category">ຍີຫໍ້ສິນຄ້າ</label>
-                        <input type="password" class="form-control" id="category" placeholder="ຍີຫໍ້ສິນຄ້າ">
-                      </div>
-                      <div class="form-group col-md-6">
-                        <label for="cat_id">ລາຄາ/ຫົວໜ່ວຍ</label>
-                        <input type="text" class="form-control" id="cat_id" placeholder="ລາຄາ/ຫົວໜ່ວຍ">
-                      </div>
-                      <div class="form-group col-md-6">
-                        <label for="category">ລາຄາລວມ</label>
-                        <input type="password" class="form-control" id="category" placeholder="ລາຄາລວມ">
-                      </div>
-                      <div class="form-group col-md-6">
-                        <label for="cat_id">ຈຳນວນໃນສະຕັອກ</label>
-                        <input type="text" class="form-control" id="cat_id" placeholder="ຈຳນວນໃນສະຕັອກ">
-                      </div>
-                      <div class="form-group col-md-6">
-                        <label for="category">ຜູ້ສະໜອງ</label>
-                        <input type="password" class="form-control" id="category" placeholder="ຜູ້ສະໜອງ">
+                      <div class="form-group col-lg-6">
+                        <label for="product_name">ຊື່ສິນຄ້າ</label>
+                        <input type="text" class="form-control" id="product_name" placeholder="ຊື່ສິນຄ້າ" required="required">
                       </div>
                       
+                      <div class="form-group col-lg-6">
+                        <label>ປະເພດສິນຄ້າ</label>
+                        <select class="form-control select2" style="width: 100%;">
+                          <option selected="selected">ກະລຸນາເລຶອກປະເພດສິນຄ້າ</option>
+                          <?php
+                          $all_publication_categories = DB::table('categories')
+													->where('publication_status', 1)
+													->get();
+														foreach ($all_publication_categories as $v_category) { ?>
+                          <option>{{$v_category->cat_name}}</option>
+                          <?php } ?>
+                        </select>
+                      </div>
+                      
+                      <div class="form-group col-lg-6">
+                        <label>ເລຶອກຍີຫໍ້ສິນຄ້າ</label>
+                        <select class="form-control select2" style="width: 100%;">
+                          <option selected="selected">ກະລຸນາເລຶອກຍີຫໍ້ສິນຄ້າ</option>
+                          <?php
+                            $all_publication_brand = DB::table('brands')
+                                  ->where('publication_status', 1)
+                                  ->get();
+                            foreach ($all_publication_brand as $v_brand) { ?>
+                          <option>{{$v_brand -> brand_name}}</option>
+                          <?php } ?>
+                        </select>
+                      </div>
+                      
+                      <div class="form-group col-lg-6">
+                        <label>ຫົວໜ່ວຍສິນຄ້າ</label>
+                        <select class="form-control select2" style="width: 100%;">
+                          <option selected="selected">ກະລຸນາເລຶອກຫົວໜ່ວຍສິນຄ້າ</option>
+                          <?php
+                            $all_publication_unit = DB::table('units')
+                                  ->where('publication_status', 1)
+                                  ->get();
+                            foreach ($all_publication_unit as $v_unit) { ?>
+                          <option>{{$v_unit -> unit_name}}</option>
+                          
+                          <?php } ?>
+                        </select>
+                      </div>
+                      <div class="form-group col-lg-6">
+                        <label for="product_size">ຂະໜາດ</label>
+                        <input type="text" class="form-control" id="product_size" placeholder="ຂະໜາດ" required="required">
+                      </div>
+                      <div class="form-group col-lg-6">
+                        <label for="product_color">ສິ</label>
+                        <input type="text" class="form-control" id="product_color" placeholder="ສິ" required="required">
+                      </div>
+                      <div class="form-group col-lg-6">
+                        <label for="category">ລາຄາ</label>
+                        <input type="text" class="form-control" id="category" placeholder="ລາຄາ" required="required">
+                      </div>
+                      <div class="form-group col-lg-12">
+                        <label for="short_desc">ລາຍລະອຽດໂດຍຫຍໍ້</label>
+                        <textarea name="short_desc" id="product_short_desc" cols="69" rows="5"  placeholder="ລາຍລະອຽດໂດຍຫຍໍ້" required="required"></textarea>
 
-                      <div class="form-group col-md-12">
-                        <label for="cat_desc">ລາຍລະອຽດ</label>
-                        <input type="email" class="form-control" id="cat_desc" placeholder="ລາຍລະອຽດ">
+                        </div>
+
+                      <div class="form-group col-lg-12">
+                        <label for="long_desc">ລາຍລະອຽດເຕັ່ມ</label>
+                          <textarea id="editor1" name="product_long_desc" rows="10" cols="80" required="required" ></textarea>
                       </div>
-                      <div class="form-group col-md-6">
+                      <div class="form-group col-lg-6">
                         <label for="InputFile">ເລຶອກຮູບພາບ</label><br>
-                        <a href="{{url('/image_*')}}" class="btn btn-primary">ເພີ່ມຮູບພາບ</a>
-                        <!-- <input type="file" id="InputFile"> -->
-                        <p class="help-block">file url</p>
+                        <!-- <a href="{{url('/image_*')}}" class="btn btn-primary">ເພີ່ມຮູບພາບ</a>
+                        <p class="help-block">file url</p> -->
+                        <input type="file" class="input-file uniform_on" name="product_image" id="product_image">
                       </div>
-                      <div class="checkbox form-group col-md-6">
+                      <div class="checkbox form-group col-lg-6">
                         <label>
-                          <input type="checkbox">ເປິດເປັນສາທາລະນະ
+                        <input type="checkbox" name="publication_status" value="1">ເປິດເປັນສາທາລະນະ
                         </label>
                       </div>
                     </div>
@@ -118,6 +151,7 @@
                      </div>
                      <div class="modal-footer">
                      <button type="button" class="btn btn-danger pull-left">ກັບຄຶນ</button>
+                     <!-- <a href="{{URL::to('add-product')}}" type="button" class="btn btn-primary pull-right">ບັນທຶກ</a> -->
                      <button type="button" class="btn btn-primary pull-right">ບັນທຶກ</button>
                      </div>
                   </div>

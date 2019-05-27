@@ -40,40 +40,6 @@ Route::get('/contact', function(){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*
 ***************** Back End Route Are here ***********
 */
@@ -100,6 +66,7 @@ Route::get('/delete-typeEmployee/{type_id}', 'admin\TypeEmployeeController@destr
 
 // ********************** Product Releated Route **************************
 Route::get('/all-products', 'admin\ProductController@index');
+Route::post('/add-product', 'admin\ProductController@store');
 
 // ********************** Category Releated Route **************************
 Route::get('/all-category', 'admin\CategoryController@index');
