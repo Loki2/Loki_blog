@@ -3,80 +3,41 @@
 <div class="wrapper">
 <div class="content-wrapper">
     <section class="content">
+
       <div class="box">
         <div class="box-header with-border">
-          <h3 class="box-title">ຈັດການຂໍ້ມູນສິນຄ້າ</h3>
+          <h3 class="box-title">ແກ້ໄຂຂໍ້ມູນປະເພດສິນຄ້າ</h3>
           <div class="box-tools pull-right">
-                  <button class="btn btn-success" data-toggle="modal" data-target="#CatModal">ເພີ່ມສິນຄ້າ</button>
-                  <button class="btn btn-primary" data-toggle="modal" data-target="#CatModal">Import</button>
+            <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
+                    title="Collapse">
+              <i class="fa fa-minus"></i></button>
           </div>
         </div>
         <div class="box-body">
-        <!-- Start here -->
-          <table id="example" class="table table-striped table-bordered" style="width:100%">
-                <thead>
-                <tr>
-                    <th>ລະຫັດສິນຄ້າ</th>
-                    <th>ຮູບພາບ</th>
-                    <th>Bar Code</th>
-                    <th>ຊື່ສິນຄ້າ</th>
-                    <th>ລາຄາ</th>
-                    <th>ຂະໜາດ</th>
-                    <th>ສີ</th>
-                    <th>ສະຖານະ</th>
-                    <th>ຕົວເລຶອກ</th>
-                  </tr>
-                </thead>
-                <tbody>
-                @foreach( $all_product_info as $v_product )
-                <tr>
-                  <td>{{ $v_product -> product_id }}</td>
-                  <td>{{ $v_product -> product_image }}</td>
-                  <td>{{ $v_product -> product_bar }}</td>
-                  <td>{{ $v_product -> product_name }}</td>
-                  <td>{{ $v_product -> product_price }}</td>
-                  <td>{{ $v_product -> product_size }}</td>
-                  <td>{{ $v_product -> product_color }}</td>
-                  <td>
-                  @if($v_product -> publication_status==1 )
-                    <span class="label label-success">Actived</span>
-                    @else
-                    <span class="label label-warning">Unactive</span>
-                    @endif
-                  </td>
-                  <td>
-                  @if($v_product -> publication_status==1)
-                     <a href="{{URL::to('/unactive-product/'.$v_product->product_id)}}" class="link"><i class="btn fa fa-check btn-success "></i></a> 
-                  @else
-                     <a href="{{URL::to('/active-product/'.$v_product->product_id)}}" class="link"><i class="btn fa fa-times-circle btn-warning "></i></a>
-                  @endif
-                     <a href="{{URL::to('/edit-product/'.$v_product->product_id)}}" class="link"><i class="btn fa fa-edit btn-primary"></i></a> 
-                     <a href="{{URL::to('/delete-product/'.$v_product->product_id)}}" id="delete" class="link"><i class="btn fa fa-trash btn-danger"></i></a>
-                  </td>
-                </tr>
-                @endforeach
-                </tbody>
-              </table>
-            </div>
-             <!-- Start Modal Form here  -->
-            <div class="modal fade" id="CatModal" tabindex="-1" role="dialog" aria-labelledby="CatModalLabel" aria-hidden="true">
-               <div class="modal-dialog modal-dialog-centered" role="document">
-                  <div class="modal-content">
-                     <div class="modal-header">
-                     <h5 class="modal-title" id="CatModalLabel">ສ້າງຂໍ້ມູນສິນຄ້າໃຫມ່</h5>
-                     </div>
-                     <div class="modal-body">
-                     <form role="form" action="{{URL::to('/add-product')}}" method="post" enctype="multipart/from-data">
-                        {{ csrf_field() }}
+        <div class="col-md-9">
+                 <p> 
+                  <?php
+                  $message=Session::get('message');
+                  if($message){
+                    echo $message;
+                    Session::put('message',null);
+                  }
+                  ?>
+                </p>
+                 </div>
 
-                    <div class="box-body">
+
+                 <form role="form" action="{{URL::to('/update-product',$product_info->product_id)}}" method="post" enctype="multipart/from-data">
+                        {{ csrf_token() }}
+
+                    <div class="box-body col-lg-8">
                       <div class="form-group col-lg-6">
                         <label for="product_bar">ລະຫັດບາໂຄດ</label>
-                        <input type="text" class="form-control" name="product_bar" id="product_bar" placeholder="ລະຫັດບາໂຄດ">
+                        <input type="text" class="form-control" name="product_bar" id="product_bar" placeholder="ລະຫັດບາໂຄດ" value="{{$product_info->product_bar}}">
                       </div>
                       <div class="form-group col-lg-6">
                         <label for="product_name">ຊື່ສິນຄ້າ</label>
-                        <input type="text" class="form-control" name="product_name" id="product_name" placeholder="ຊື່ສິນຄ້າ" required="required">
+                        <input type="text" class="form-control" name="product_name" id="product_name" placeholder="ຊື່ສິນຄ້າ"  value="{{$product_info->product_name}}">
                       </div>
                       
                       <div class="form-group col-lg-6">
@@ -123,26 +84,24 @@
                       </div>
                       <div class="form-group col-lg-6">
                         <label for="product_size">ຂະໜາດ</label>
-                        <input type="text" class="form-control" id="product_size" name="product_size" placeholder="ຂະໜາດ" required="required">
+                        <input type="text" class="form-control" id="product_size" name="product_size" placeholder="ຂະໜາດ"  value="{{$product_info->product_size}}">
                       </div>
                       <div class="form-group col-lg-6">
                         <label for="product_color">ສິ</label>
-                        <input type="text" class="form-control" name="product_color" id="product_color" placeholder="ສິ" required="required">
+                        <input type="text" class="form-control" name="product_color" id="product_color" placeholder="ສິ"  value="{{$product_info->product_color}}">
                       </div>
                       <div class="form-group col-lg-6">
                         <label for="product_price">ລາຄາ</label>
-                        <input type="text" class="form-control" id="product_price" name="product_price" placeholder="ລາຄາ" required="required">
+                        <input type="text" class="form-control" id="product_price" name="product_price" placeholder="ລາຄາ"  value="{{$product_info->product_price}}">
                       </div>
                       <div class="form-group col-lg-12">
                         <label for="product_short_desc">ລາຍລະອຽດໂດຍຫຍໍ້</label>
-                        <textarea name="product_short_desc" id="product_short_desc" name="product_short_desc" cols="69" rows="5"  placeholder="ລາຍລະອຽດໂດຍຫຍໍ້" required="required"></textarea>
-
+                        <textarea name="product_short_desc" id="product_short_desc" name="product_short_desc" cols="92" rows="5"  placeholder="ລາຍລະອຽດໂດຍຫຍໍ້" >{{$product_info->product_short_desc}}</textarea>
                         </div>
-
-                      <div class="form-group col-lg-12">
+                      <!-- <div class="form-group col-lg-12">
                         <label for="product_long_desc">ລາຍລະອຽດເຕັ່ມ</label>
-                          <textarea id="editor1" name="product_long_desc" name="product_long_desc" rows="10" cols="80" required="required"></textarea>
-                      </div>
+                          <textarea id="editor1" name="product_long_desc" name="product_long_desc" rows="10" cols="80" >{{$product_info->product_long_desc}}</textarea>
+                      </div> -->
                       <div class="form-group col-lg-6">
                         <label for="InputFile">ເລຶອກຮູບພາບ</label><br>
                         <!-- <a href="{{url('/image_*')}}" class="btn btn-primary">ເພີ່ມຮູບພາບ</a>
@@ -161,14 +120,11 @@
                      <div class="modal-footer">
                      <button type="button" class="btn btn-danger pull-left">ກັບຄຶນ</button>
                      <!-- <a href="{{URL::to('add-product')}}" type="button" class="btn btn-primary pull-right">ບັນທຶກ</a> -->
-                     <button type="submit" class="btn btn-success">ບັນທຶກ</button>
+                     <button type="submit" class="btn btn-success pull-right">ບັນທຶກ</button>
                      </div>
                      </form>
-                  </div>
-               </div>
-               </div>
-                <!-- End New Modal here -->
-          <!-- End here -->
+
+
         </div>
       </div>
     </section>   

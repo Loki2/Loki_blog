@@ -21,7 +21,12 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return view('admin.pages.product.product');
+        $all_product_info=DB::table('products')->get();
+        $manage_product=view('admin.pages.product.product')
+        ->with('all_product_info', $all_product_info );
+        return view('admin.index')
+            ->with('admin.all_product', $manage_product);
+        // return view('admin.pages.product.product');
     }
 
     /**
@@ -69,13 +74,13 @@ class ProductController extends Controller
                   $data['product_image']=$image_url;
                     DB::table('products')->insert($data);
                     Session::put('message','Product Added successfuly...!');
-                    return Redirect::to('/add-product');
+                    return Redirect::to('/all-products');
             }
          }
         $data['product_image']='';
                 DB::table('products')->insert($data);
                 Session::put('message','Product added without image successfuly...!');
-                return Redirect::to('/add-product');
+                return Redirect::to('/all-products');
         // return view('admin/pages/product/create_image');
     }
 
@@ -96,9 +101,16 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($product_id)
     {
-        //
+        $product_info = DB::table('products')
+            ->where('product_id', $product_id)
+            ->first(); 
+            $product_info=view('admin.pages.product.update_product')
+            ->with('product_info', $product_info );
+            return view('admin.index')
+                ->with('admin.pages.product.update_product', $product_info);
+        return view('admin.pages.product.update_product');
     }
 
     /**
@@ -108,9 +120,29 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $product_id)
     {
-        //
+        $data=array();
+        $data['product_bar']=$request->product_bar;
+        $data['cat_id']=$request->cat_id;
+        $data['brand_id']=$request->brand_id;
+        $data['product_bar']=$request->product_bar;
+        $data['product_name']=$request->product_name;
+        $data['product_short_desc']=$request->product_short_desc;
+        $data['product_long_desc']=$request->product_long_desc;
+        $data['product_size']=$request->product_size;
+        $data['product_color']=$request->product_color;
+        $data['unit_id']=$request->unit_id;
+        $data['product_price']=$request->product_price;
+        $data['publication_status']=$request->publication_status;
+
+        DB::table('products')
+         ->where('product_id', $product_id)
+         ->update($data); 
+
+         Session::get('message','ສິນຄ້າໄດ້ແກ້ໄຂສຳເລັດແລ້ວ');
+         return Redirect::to('/all-product');
+        // return view('admin.pages.product.update_product');
     }
 
     /**
@@ -119,8 +151,28 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($product_id)
     {
-        //
+        DB::table('products')
+        ->where('product_id', $product_id)
+        ->delete();
+        Session::get('message', 'ສິນຄ້າຖຶກລົບແລ້ວ !');
+        return Redirect:: to('/all-products');
+    }
+    public function unactive_product($product_id)
+    {
+         DB::table('products')
+            ->where('product_id', $product_id)
+            ->update(['publication_status'=>0] );
+            Session::put('message','ປະເພດສິນຄ້າປິດໃຊ້ງານສຳເລັດແລ້ວ...!');
+            return Redirect::to('/all-products');
+    }
+    public function active_product($product_id)
+    {
+        DB::table('products')
+            ->where('product_id', $product_id)
+            ->update(['publication_status'=>1] );
+            Session::put('message','ປະເພດສິນຄ້າເປິດໃຊ້ງານລຳເລັດແລ້ວ...!');
+            return Redirect::to('/all-products');
     }
 }

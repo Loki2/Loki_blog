@@ -17,13 +17,13 @@ class CreateEmployeesTable extends Migration
             $table->increments('employee_id');
             $table->string('employee_name');
             $table->string('employee_surname');
-            $table->string('employee_gender');
-            $table->string('employee_position');
+            $table->integer('gender_id');
+            $table->integer('type_id');
             $table->string('employee_salary');
             $table->string('employee_address');
             $table->string('employee_email');
             $table->string('employee_phone');
-            $table->string('employee_status');
+            $table->integer('status_id');
             $table->timestamps();
         });
     }

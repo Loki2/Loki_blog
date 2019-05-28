@@ -30,25 +30,28 @@
             <i class="fa fa-dashboard"></i> <span>ໜ້າຫຼັກ</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
+              
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="{{url('/dashboard')}}"><i class="fa fa-circle-o"></i>ໜ້າຫລັກ</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i>ຈັດການຜູ້ໃຊ້ລະບົບ</a></li>
+          <li><a href="{{url('/dashboard')}}"><i class="fa fa-circle-o"></i> ໜ້າຫລັກ</a></li>
           </ul>
         </li>
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-laptop"></i>
-            <span>ຈັດການຂໍ້ມູນພະນັກງານ</span>
+            <i class="fa fa-table"></i> <span>ຈັດການຂໍ້ມູນພືນຖ່ານ</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="{{URL::to('/create-employee')}}"><i class="fa fa-circle-o"></i>ຂໍ້ມູນສ່ວນບຸກຄົນ</a></li>
+            <li><a href="{{url('/all-products')}}"><i class="fa fa-circle-o"></i> ສິນຄ້າທັງໝົດ</a></li>
+            <li><a href="{{url('/all-category')}}"><i class="fa fa-circle-o"></i> ປະເພດສີນຄ້າ</a></li>
+            <li><a href="{{url('/all-brand')}}"><i class="fa fa-circle-o"></i> ຍີຫໍ້ສິນຄ້າ</a></li>
+            <li><a href="{{url('/all-unit')}}"><i class="fa fa-circle-o"></i> ຫົວໜ່ວຍສິນຄ້າ</a></li>
             <li><a href="{{URL::to('/all-employee')}}"><i class="fa fa-circle-o"></i>ລາຍຊື່ພະນັກງານ</a></li>
             <li><a href="{{URL::to('/type-employee')}}"><i class="fa fa-circle-o"></i>ປະເພດພະນັກງານ</a></li>
+            <li><a href="{{URL::to('/all-supplier')}}"><i class="fa fa-circle-o"></i> ຜູ້ສະໜອງ</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -64,34 +67,7 @@
             <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> ຈັດການ order</a></li>
           </ul>
         </li>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-table"></i> <span>ຈັດການຂໍ້ມູນສິນຄ້າ</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="{{url('/all-products')}}"><i class="fa fa-circle-o"></i> ສິນຄ້າທັງໝົດ</a></li>
-            <li><a href="{{url('/all-category')}}"><i class="fa fa-circle-o"></i> ປະເພດສີນຄ້າ</a></li>
-            <li><a href="{{url('/all-brand')}}"><i class="fa fa-circle-o"></i> ຍີຫໍ້ສິນຄ້າ</a></li>
-            <li><a href="{{url('/all-unit')}}"><i class="fa fa-circle-o"></i> ຫົວໜ່ວຍສິນຄ້າ</a></li>
-          </ul>
-        </li>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa  fa-list-alt"></i> <span>ການນຳເຂົາສິນຄ້າ</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="pages/examples/invoice.html"><i class="fa fa-circle-o"></i> ຂໍ້ມູນສັ່ງຊື້</a></li>
-            <li><a href="pages/examples/profile.html"><i class="fa fa-circle-o"></i> ຂໍ້ມູນສິນຄ້າ</a></li>
-            <li><a href="pages/examples/login.html"><i class="fa fa-circle-o"></i> ລາຍການ</a></li>
-            <li><a href="{{URL::to('/all-supplier')}}"><i class="fa fa-circle-o"></i> ຜູ້ສະໜອງ</a></li>
-          </ul>
-        </li>
+       
         <li class="treeview">
           <a href="#">
             <i class="fa fa-hourglass-end"></i> <span>ຈັດການສະຕັອກ</span>
@@ -121,37 +97,7 @@
             <li><a href="pages/examples/register.html"><i class="fa fa-circle-o"></i> ຜູ້ສະໜອງ</a></li>
           </ul>
         </li>
-
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-database"></i> <span>ຂໍ້ມູນຜູ້ສະໜອງ</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="pages/examples/invoice.html"><i class="fa fa-circle-o"></i> ຂໍ້ມູນສັ່ງຊື້</a></li>
-            <li><a href="pages/examples/profile.html"><i class="fa fa-circle-o"></i> ຂໍ້ມູນສິນຄ້າ</a></li>
-            <li><a href="pages/examples/login.html"><i class="fa fa-circle-o"></i> ລາຍການ</a></li>
-            <li><a href="{{URL::to('/all-supplier')}}"><i class="fa fa-circle-o"></i> ຜູ້ສະໜອງ</a></li>
-          </ul>
-        </li>
-
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-send-o"></i> <span>ການສັງຈອງ</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="pages/examples/invoice.html"><i class="fa fa-circle-o"></i> ຂໍ້ມູນສັ່ງຊື້</a></li>
-            <li><a href="pages/examples/profile.html"><i class="fa fa-circle-o"></i> ຂໍ້ມູນສິນຄ້າ</a></li>
-            <li><a href="pages/examples/login.html"><i class="fa fa-circle-o"></i> ລາຍການ</a></li>
-            <li><a href="pages/examples/register.html"><i class="fa fa-circle-o"></i> ຜູ້ສະໜອງ</a></li>
-          </ul>
-        </li>
-
+        
         <li class="treeview">
           <a href="#">
             <i class="fa fa-folder"></i> <span>ລາຍງານ</span>
