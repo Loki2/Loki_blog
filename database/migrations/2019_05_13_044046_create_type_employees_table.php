@@ -17,6 +17,7 @@ class CreateTypeEmployeesTable extends Migration
             $table->increments('type_id');
             $table->string('type_employee');
             $table->string('use_role');
+            $table->integer('publication_status')->nullable();
             $table->timestamps();
         });
     }

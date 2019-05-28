@@ -72,7 +72,11 @@
                         <textarea class="cleditor" name="use_role" id="use_role" cols="71" placeholder="ລາຍລະອຽດຜູ້ໃຊ້...." required="required"></textarea>
                         </div>
                       </div>
-                      
+                      <div class="checkbox form-group col-md-6">
+                        <label>
+                        <input type="checkbox" name="publication_status" value="1">ເປິດເປັນສາທາລະນະ
+                        </label>
+                      </div>
                     </div>
                     <!-- /.box-body -->
                     </div>

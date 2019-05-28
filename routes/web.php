@@ -54,6 +54,7 @@ Route::post('/admin-dashboard', 'admin\HomeController@dashboard')->name('admin-d
 
 // ********************** Employee Releated Route **************************
 Route::get('/all-employee', 'admin\EmployeeController@index');
+Route::post('/add-employee', 'admin\EmployeeController@store');
 
 
 // ********************** Type-Employee Releated Route **************************

@@ -49,7 +49,7 @@ class TypeEmployeeController extends Controller
        $data['type_id']=$request->type_id;
        $data['type_employee']=$request->type_employee;
        $data['use_role']=$request->use_role;
-
+       $data['publication_status']=$request->publication_status;
         DB::table('type_employees')->insert($data);
         Session::put('message','ການເພີ່ມປະເພດພະນັກງານລຳເລັດແລ້ວ...!');
         return Redirect::to('/type-employee');
