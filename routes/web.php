@@ -68,6 +68,7 @@ Route::get('/delete-typeEmployee/{type_id}', 'admin\TypeEmployeeController@destr
 Route::get('/all-products', 'admin\ProductController@index');
 Route::post('/add-product', 'admin\ProductController@store');
 
+
 // ********************** Category Releated Route **************************
 Route::get('/all-category', 'admin\CategoryController@index');
 Route::post('/add-category', 'admin\CategoryController@store');

@@ -57,22 +57,22 @@
                      <h5 class="modal-title" id="CatModalLabel">ສ້າງຂໍ້ມູນສິນຄ້າໃຫມ່</h5>
                      </div>
                      <div class="modal-body">
-                     <form role="form" action="{{URL::to('/save-product')}}" method="post" enctype="multipart/from-data">
+                     <form role="form" action="{{URL::to('/add-product')}}" method="post" enctype="multipart/from-data">
                         {{ csrf_field() }}
 
                     <div class="box-body">
                       <div class="form-group col-lg-6">
-                        <label for="cat_id">ລະຫັດບາໂຄດ</label>
-                        <input type="text" class="form-control" id="cat_id" placeholder="ລະຫັດບາໂຄດ">
+                        <label for="product_bar">ລະຫັດບາໂຄດ</label>
+                        <input type="text" class="form-control" name="product_bar" id="product_bar" placeholder="ລະຫັດບາໂຄດ">
                       </div>
                       <div class="form-group col-lg-6">
                         <label for="product_name">ຊື່ສິນຄ້າ</label>
-                        <input type="text" class="form-control" id="product_name" placeholder="ຊື່ສິນຄ້າ" required="required">
+                        <input type="text" class="form-control" name="product_name" id="product_name" placeholder="ຊື່ສິນຄ້າ" required="required">
                       </div>
                       
                       <div class="form-group col-lg-6">
                         <label>ປະເພດສິນຄ້າ</label>
-                        <select class="form-control select2" style="width: 100%;">
+                        <select class="form-control select2" style="width: 100%;" name="cat_id">
                           <option selected="selected">ກະລຸນາເລຶອກປະເພດສິນຄ້າ</option>
                           <?php
                           $all_publication_categories = DB::table('categories')
@@ -86,7 +86,7 @@
                       
                       <div class="form-group col-lg-6">
                         <label>ເລຶອກຍີຫໍ້ສິນຄ້າ</label>
-                        <select class="form-control select2" style="width: 100%;">
+                        <select class="form-control select2" style="width: 100%;" name="brand_id">
                           <option selected="selected">ກະລຸນາເລຶອກຍີຫໍ້ສິນຄ້າ</option>
                           <?php
                             $all_publication_brand = DB::table('brands')
@@ -100,7 +100,7 @@
                       
                       <div class="form-group col-lg-6">
                         <label>ຫົວໜ່ວຍສິນຄ້າ</label>
-                        <select class="form-control select2" style="width: 100%;">
+                        <select class="form-control select2" style="width: 100%;" name="unit_id">
                           <option selected="selected">ກະລຸນາເລຶອກຫົວໜ່ວຍສິນຄ້າ</option>
                           <?php
                             $all_publication_unit = DB::table('units')
@@ -114,25 +114,25 @@
                       </div>
                       <div class="form-group col-lg-6">
                         <label for="product_size">ຂະໜາດ</label>
-                        <input type="text" class="form-control" id="product_size" placeholder="ຂະໜາດ" required="required">
+                        <input type="text" class="form-control" id="product_size" name="product_size" placeholder="ຂະໜາດ" required="required">
                       </div>
                       <div class="form-group col-lg-6">
                         <label for="product_color">ສິ</label>
-                        <input type="text" class="form-control" id="product_color" placeholder="ສິ" required="required">
+                        <input type="text" class="form-control" name="product_color" id="product_color" placeholder="ສິ" required="required">
                       </div>
                       <div class="form-group col-lg-6">
-                        <label for="category">ລາຄາ</label>
-                        <input type="text" class="form-control" id="category" placeholder="ລາຄາ" required="required">
+                        <label for="product_price">ລາຄາ</label>
+                        <input type="text" class="form-control" id="product_price" name="product_price" placeholder="ລາຄາ" required="required">
                       </div>
                       <div class="form-group col-lg-12">
-                        <label for="short_desc">ລາຍລະອຽດໂດຍຫຍໍ້</label>
-                        <textarea name="short_desc" id="product_short_desc" cols="69" rows="5"  placeholder="ລາຍລະອຽດໂດຍຫຍໍ້" required="required"></textarea>
+                        <label for="product_short_desc">ລາຍລະອຽດໂດຍຫຍໍ້</label>
+                        <textarea name="product_short_desc" id="product_short_desc" name="product_short_desc" cols="69" rows="5"  placeholder="ລາຍລະອຽດໂດຍຫຍໍ້" required="required"></textarea>
 
                         </div>
 
                       <div class="form-group col-lg-12">
-                        <label for="long_desc">ລາຍລະອຽດເຕັ່ມ</label>
-                          <textarea id="editor1" name="product_long_desc" rows="10" cols="80" required="required" ></textarea>
+                        <label for="product_long_desc">ລາຍລະອຽດເຕັ່ມ</label>
+                          <textarea id="editor1" name="product_long_desc" name="product_long_desc" rows="10" cols="80" required="required"></textarea>
                       </div>
                       <div class="form-group col-lg-6">
                         <label for="InputFile">ເລຶອກຮູບພາບ</label><br>
@@ -147,13 +147,14 @@
                       </div>
                     </div>
                     <!-- /.box-body -->
-                  </form>
+                 
                      </div>
                      <div class="modal-footer">
                      <button type="button" class="btn btn-danger pull-left">ກັບຄຶນ</button>
                      <!-- <a href="{{URL::to('add-product')}}" type="button" class="btn btn-primary pull-right">ບັນທຶກ</a> -->
-                     <button type="button" class="btn btn-primary pull-right">ບັນທຶກ</button>
+                     <button type="submit" class="btn btn-success">ບັນທຶກ</button>
                      </div>
+                     </form>
                   </div>
                </div>
                </div>
