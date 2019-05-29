@@ -123,19 +123,20 @@
                         <input type="text" class="form-control" id="employee_address" name="employee_address" placeholder="ທີຢູ່ປັດຈຸບັນ" required="required">
                       </div>
 
-                      <!-- <div class="form-group col-lg-6">
+                      <div class="form-group col-lg-6">
                         <label>ແຂວງ</label>
                         <select class="form-control select2" style="width: 100%;" name="province_id">
                           <option>ກະລຸນາເລຶອກແຂວງ</option>
-                          <option  value="1">ນຄ</option>
-                          <option  value="2">ຊຍ</option>
-                          <option  value="3">ຫຼບ</option>
+                          <?php
+                            $all_publication_province = DB::table('provinces')
+                                  ->get();
+                            foreach ($all_publication_province as $v_province) { ?>
+                          <option  value="{{$v_province->province_id}}">{{$v_province -> province_name}}</option>
+                          
+                          <?php } ?>
                         </select>
-                      </div> -->
-                      <div class="form-group col-lg-6">
-                        <label for="province_id">ແຂວງ</label>
-                        <input type="text" class="form-control" id="province_id" name="province_id" placeholder="ລະຫັດແຂວງ" required="required">
                       </div>
+                      
                       <div class="form-group col-lg-6">
                         <label for="city">ເມື່ອງ</label>
                         <input type="text" class="form-control" id="city" name="city" placeholder="ເມື່ອງ" required="required">

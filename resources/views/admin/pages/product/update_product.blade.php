@@ -1,10 +1,12 @@
 @extends('admin/index')
 @section('content')
+@extends('admin/index')
+@section('content')
 <div class="wrapper">
 <div class="content-wrapper">
     <section class="content">
 
-      <div class="box">
+    <div class="box">
         <div class="box-header with-border">
           <h3 class="box-title">ແກ້ໄຂຂໍ້ມູນປະເພດສິນຄ້າ</h3>
           <div class="box-tools pull-right">
@@ -25,12 +27,9 @@
                   ?>
                 </p>
                  </div>
-
-
-                 <form role="form" action="{{URL::to('/update-product',$product_info->product_id)}}" method="post" enctype="multipart/from-data">
-                        {{ csrf_token() }}
-
-                    <div class="box-body col-lg-8">
+        <form action="{{URL::to('/update-product',$product_info->product_id)}}">
+        {{  csrf_field() }}
+        <div class="box-body col-lg-8">
                       <div class="form-group col-lg-6">
                         <label for="product_bar">ລະຫັດບາໂຄດ</label>
                         <input type="text" class="form-control" name="product_bar" id="product_bar" placeholder="ລະຫັດບາໂຄດ" value="{{$product_info->product_bar}}">
@@ -98,10 +97,10 @@
                         <label for="product_short_desc">ລາຍລະອຽດໂດຍຫຍໍ້</label>
                         <textarea name="product_short_desc" id="product_short_desc" name="product_short_desc" cols="92" rows="5"  placeholder="ລາຍລະອຽດໂດຍຫຍໍ້" >{{$product_info->product_short_desc}}</textarea>
                         </div>
-                      <!-- <div class="form-group col-lg-12">
+                      <div class="form-group col-lg-12">
                         <label for="product_long_desc">ລາຍລະອຽດເຕັ່ມ</label>
                           <textarea id="editor1" name="product_long_desc" name="product_long_desc" rows="10" cols="80" >{{$product_info->product_long_desc}}</textarea>
-                      </div> -->
+                      </div>
                       <div class="form-group col-lg-6">
                         <label for="InputFile">ເລຶອກຮູບພາບ</label><br>
                         <!-- <a href="{{url('/image_*')}}" class="btn btn-primary">ເພີ່ມຮູບພາບ</a>
@@ -122,11 +121,14 @@
                      <!-- <a href="{{URL::to('add-product')}}" type="button" class="btn btn-primary pull-right">ບັນທຶກ</a> -->
                      <button type="submit" class="btn btn-success pull-right">ບັນທຶກ</button>
                      </div>
-                     </form>
+        </form>
+
+
 
 
         </div>
       </div>
+    </div>
     </section>   
   </div>
 </div>
