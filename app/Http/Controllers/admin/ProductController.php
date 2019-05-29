@@ -21,12 +21,19 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $all_product_info=DB::table('products')->get();
+
+        $all_product_info=DB::table('products')
+                ->join('categories', 'products.cat_id','=', 'categories.cat_id')
+                ->join('brands', 'products.brand_id','=', 'brands.brand_id')
+                ->get();
+        // echo "<pre>";
+        // print_r($all_product_info);
+        // echo "</pre>";
         $manage_product=view('admin.pages.product.product')
         ->with('all_product_info', $all_product_info );
         return view('admin.index')
             ->with('admin.all_product', $manage_product);
-        // return view('admin.pages.product.product');
+        return view('admin.pages.product.product');
     }
 
     /**
@@ -163,7 +170,7 @@ class ProductController extends Controller
     {
          DB::table('products')
             ->where('product_id', $product_id)
-            ->update(['publication_status'=>0] );
+            ->update(['publication_status' => 0] );
             Session::put('message','ປະເພດສິນຄ້າປິດໃຊ້ງານສຳເລັດແລ້ວ...!');
             return Redirect::to('/all-products');
     }
@@ -171,7 +178,7 @@ class ProductController extends Controller
     {
         DB::table('products')
             ->where('product_id', $product_id)
-            ->update(['publication_status'=>1] );
+            ->update(['publication_status' => 1] );
             Session::put('message','ປະເພດສິນຄ້າເປິດໃຊ້ງານລຳເລັດແລ້ວ...!');
             return Redirect::to('/all-products');
     }

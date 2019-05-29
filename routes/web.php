@@ -55,6 +55,9 @@ Route::post('/admin-dashboard', 'admin\HomeController@dashboard')->name('admin-d
 // ********************** Employee Releated Route **************************
 Route::get('/all-employee', 'admin\EmployeeController@index');
 Route::post('/add-employee', 'admin\EmployeeController@store');
+Route::get('/edit-employee/{employee_id}', 'admin\EmployeeController@edit');
+Route::get('/update-employee/{employee_id}', 'admin\EmployeeController@update');
+Route::get('/delete-employee/{employee_id}', 'admin\EmployeeController@destroy');
 
 
 // ********************** Type-Employee Releated Route **************************
@@ -63,6 +66,7 @@ Route::post('/add-typeEmployee', 'admin\TypeEmployeeController@store');
 Route::get('/edit-typeEmployee/{type_id}', 'admin\TypeEmployeeController@edit');
 Route::get('/update-typeEmployee/{type_id}', 'admin\TypeEmployeeController@update');
 Route::get('/delete-typeEmployee/{type_id}', 'admin\TypeEmployeeController@destroy');
+
 
 // ********************** Product Releated Route **************************
 Route::get('/all-products', 'admin\ProductController@index');

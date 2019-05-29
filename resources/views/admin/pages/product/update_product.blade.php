@@ -122,10 +122,6 @@
                      <button type="submit" class="btn btn-success pull-right">ບັນທຶກ</button>
                      </div>
         </form>
-
-
-
-
         </div>
       </div>
     </div>

@@ -24,8 +24,6 @@
                   <th>ຕໍາແໜ່ງ</th>
                   <th>ສະຖານະ</th>
                   <th>ທີຢູ່ປັດຈຸບັນ</th>
-                  <th>ແຂວງ</th>
-                  <th>ເມືອງ</th>
                   <th>ອິເມວ</th>
                   <th>ເບີໂທ</th>
                   <th>ຕົວເລຶອກ</th>
@@ -37,17 +35,15 @@
                   <td>{{ $v_employee -> employee_id }}</td>
                   <td>{{ $v_employee -> employee_name }}</td>
                   <td>{{ $v_employee -> employee_surname }}</td>
-                  <td>{{ $v_employee -> gender_id }}</td>
-                  <td>{{ $v_employee -> type_id }}</td>
-                  <td>{{ $v_employee -> status_id }}</td>
-                  <td>{{ $v_employee -> employee_address }}</td>
-                  <td>{{ $v_employee -> province_id }}</td>
-                  <td>{{ $v_employee -> city }}</td>
+                  <td>{{ $v_employee -> gender_title }}</td>
+                  <td>{{ $v_employee -> type_employee }}</td>
+                  <td>{{ $v_employee -> status_title }}</td>
+                  <td>{{ $v_employee -> employee_address }} {{ $v_employee -> city }} {{ $v_employee -> province_name }}</td>
                   <td>{{ $v_employee -> employee_email }}</td>
                   <td>{{ $v_employee -> employee_phone }}</td>
                   <td>
-                     <a href="#" class="link"><i class="btn fa fa-edit btn-primary"></i></a> 
-                     <a href="#" class="link"><i class="btn fa fa-trash btn-danger"></i></a>
+                     <a href="{{URL::to('/edit-employee/'.$v_employee->employee_id)}}" class="link"><i class="btn fa fa-edit btn-primary"></i></a> 
+                     <a href="{{URL::to('/delete-employee/'.$v_employee->employee_id)}}" id="delete" class="link"><i class="btn fa fa-trash btn-danger"></i></a>
                   </td>
                 </tr>
                 @endforeach
@@ -65,7 +61,7 @@
                      <form role="form" action="{{URL::to('/add-employee')}}" method="post" enctype="multipart/form-data">
                         {{ csrf_field() }}
 
-                    <div class="box-body">
+                      <div class="box-body">
                       <div class="form-group col-lg-6">
                         <label for="employee_name">ຊື່ພະນັກງານ</label>
                         <input type="text" class="form-control" name="employee_name" id="employee_name" placeholder="ຊື່ພະນັກງານ" required="required">
@@ -170,7 +166,7 @@
                </div>
 
 
-
+                              
         </div>
       </div>
     </section>   

@@ -41,9 +41,9 @@
                   <td>{{ $v_category -> cat_desc }}</td>
                   <td>
                   @if($v_category -> publication_status==1 )
-                    <span class="label label-success">Actived</span>
+                    <span class="label label-primary ">Actived</span>
                     @else
-                    <span class="label label-warning">Unactive</span>
+                    <span class="label label-danger">Unactive</span>
                     @endif
                   </td>
                   <td>

@@ -20,6 +20,8 @@
                     <th>ຮູບພາບ</th>
                     <th>Bar Code</th>
                     <th>ຊື່ສິນຄ້າ</th>
+                    <th>ປະເພດສິນຄ້າ</th>
+                    <th>ຍີຫໍ້ສິນຄ້າ</th>
                     <th>ລາຄາ</th>
                     <th>ຂະໜາດ</th>
                     <th>ສີ</th>
@@ -31,10 +33,12 @@
                 @foreach( $all_product_info as $v_product )
                 <tr>
                   <td>{{ $v_product -> product_id }}</td>
-                  <td>{{ $v_product -> product_image }}</td>
+                  <td><img src="{{ URL::to($v_product -> product_image) }}" style="width:100px; heigh:40px;" alt=""> </td>
                   <td>{{ $v_product -> product_bar }}</td>
                   <td>{{ $v_product -> product_name }}</td>
-                  <td>{{ $v_product -> product_price }}</td>
+                  <td>{{ $v_product -> cat_name }}</td>
+                  <td>{{ $v_product -> brand_name }}</td>
+                  <td>{{ $v_product -> product_price }} $</td>
                   <td>{{ $v_product -> product_size }}</td>
                   <td>{{ $v_product -> product_color }}</td>
                   <td>
@@ -66,7 +70,7 @@
                      <h5 class="modal-title" id="CatModalLabel">ສ້າງຂໍ້ມູນສິນຄ້າໃຫມ່</h5>
                      </div>
                      <div class="modal-body">
-                     <form role="form" action="{{URL::to('/add-product')}}" method="post" enctype="multipart/from-data">
+                     <form role="form" action="{{URL::to('/add-product')}}" method="post" enctype="multipart/form-data">
                         {{ csrf_field() }}
 
                     <div class="box-body">
